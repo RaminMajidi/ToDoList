@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    user-select: none;
+}
+body{
+    direction: rtl;
+}
+
+.container{
+    display: flex;
+    flex-direction:column;
+}
+.todolistHeader{
+    text-align: center;
+    margin: 10px auto;
+    width: 90%;
+    height: 20%;
+    background-color:#f44336;
+}
+#listTitle{
+    margin: 10px 0;
+}
+@media (max-width: 450px){
+    #listTitle{
+        font-size: medium;
+    }
+}
+#inputTask{
+    margin: 5px 0;
+    padding: 2px;
+    font-size: 16px;
+    width:50%;
+}
+#btnInsert{
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 5px 0;
+    padding: 4px;
+    font-size: 16px;
+    background-color: #d9d9d9;
+}
+#btnInsert:hover{
+    background-color:#bbb;
+    
+}
+@media (max-width: 450px){
+    #inputtask,#btnInsert{
+        font-size: 12px;
+    }
+
+}
+
+ul li{
+    width: 90%;
+    margin: 5px auto;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    list-style: none;
+    text-align: center;
+}
+ul li:nth-child(odd) {
+    background: #bebebe;
+  }
+  ul li:hover {
+    background: rgb(58, 52, 52);
+    color: white;
+  }
+  div.done {
+    background: rgb(192, 164, 238);
+    color: rgb(2, 2, 2);
+    text-decoration: line-through;
+  }
+  div.done::before {
+    content: '';
+    position: absolute;
+    border-color: rgb(7, 7, 7);
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    right:10px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+  @media (max-width: 450px){
+    ul li{
+        font-size: 12px;
+    }
+}
+  .remove{
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding:12px 16px;
+      
+      margin: auto;
+      height: 100%;;
+  }
+  .remove:hover {
+    background-color: #f44336;
+    color: white;
+    font-weight: bold;
+  }
+  .todolistHeader:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
