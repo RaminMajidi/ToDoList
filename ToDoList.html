@@ -1,0 +1,24 @@
+<html lang="en" onload="getTasks()">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ToDoList.css">
+    <title>ToDoList</title>
+</head>
+<body>
+    <div class="container">
+        <div class="todolistHeader">
+                <h2 id="listTitle">برنامه کارهای روزانه</h2>
+                   <form action="" class="taskAdder"> 
+                    <input type="text" name="task" id="inputTask" placeholder="عنوان..." required>
+                    <input type="submit" value="افزودن" id="btnInsert">
+                   </form>     
+        </div>
+            <ul class="myTasks">
+            </ul>
+    </div>
+    
+</body>
+<script src="ToDoList.js"></script>
+</html>
