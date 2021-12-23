@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     outline: none;
@@ -6,111 +6,139 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     user-select: none;
 }
-body{
+
+body {
     direction: rtl;
+    background-color: #222831;
 }
 
-.container{
+.container {
+    margin: auto;
     display: flex;
-    flex-direction:column;
+    max-width: 700px;
+    flex-direction: column;
 }
-.todolistHeader{
+
+.todolistHeader {
     text-align: center;
     margin: 10px auto;
     width: 90%;
     height: 20%;
-    background-color:#f44336;
+    border-radius: 10px;
+    background-color: #393e46;
 }
-#listTitle{
+
+#listTitle {
     margin: 10px 0;
+    color: #eeeeee;
 }
-@media (max-width: 450px){
-    #listTitle{
+
+@media (max-width: 450px) {
+    #listTitle {
         font-size: medium;
     }
 }
-#inputTask{
+
+#inputTask {
     margin: 5px 0;
-    padding: 2px;
+    padding: 5px;
     font-size: 16px;
-    width:50%;
+    width: 50%;
+    border-radius: 10px;
 }
-#btnInsert{
+
+#btnInsert {
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 30px;
     margin: 5px 0;
-    padding: 4px;
+    padding: 5px;
     font-size: 16px;
-    background-color: #d9d9d9;
+    text-align: center;
+    background-color: #00adb5;
+    color: #eeeeee;
+    outline: none;
+    font-weight: bold;
 }
-#btnInsert:hover{
-    background-color:#bbb;
-    
+
+#btnInsert:hover {
+    background-color: #00fff5;
+    color: #222831;
 }
-@media (max-width: 450px){
-    #inputtask,#btnInsert{
+
+@media (max-width: 450px) {
+    #inputtask,
+    #btnInsert {
         font-size: 12px;
     }
-
 }
 
-ul li{
+ul li {
     width: 90%;
     margin: 5px auto;
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
-    background: #eee;
+    background: #00fff5;
+    color: #222831;
     font-size: 18px;
+    font-weight: 600;
     transition: 0.2s;
     list-style: none;
     text-align: center;
+    border-radius: 10px;
 }
+
 ul li:nth-child(odd) {
-    background: #bebebe;
-  }
-  ul li:hover {
-    background: rgb(58, 52, 52);
+    background: #00adb5;
+}
+
+ul li:hover {
+    background: #222831;
+    border: 1px solid white;
     color: white;
-  }
-  div.done {
-    background: rgb(192, 164, 238);
-    color: rgb(2, 2, 2);
+}
+
+div.done {
     text-decoration: line-through;
-  }
-  div.done::before {
+    border-radius: 8px;
+}
+
+div.done::before {
     content: '';
     position: absolute;
-    border-color: rgb(7, 7, 7);
+    border-color: #f44336;
     border-style: solid;
     border-width: 0 2px 2px 0;
     top: 10px;
-    right:10px;
+    right: 20px;
     transform: rotate(45deg);
     height: 15px;
     width: 7px;
-  }
-  @media (max-width: 450px){
-    ul li{
+}
+
+@media (max-width: 450px) {
+    ul li {
         font-size: 12px;
     }
 }
-  .remove{
-      position: absolute;
-      left: 0;
-      top: 0;
-      padding:12px 16px;
-      
-      margin: auto;
-      height: 100%;;
-  }
-  .remove:hover {
+
+.remove {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 12px 12px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.remove:hover {
     background-color: #f44336;
     color: white;
     font-weight: bold;
-  }
-  .todolistHeader:after {
+}
+
+.todolistHeader:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
